@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-snowfall {
+  animation: snowfall linear infinite;
+}
+
+/* Ensure the app takes up at least the full viewport height */
+html, body, #root {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
